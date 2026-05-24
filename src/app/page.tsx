@@ -48,11 +48,11 @@ const REASONS = [
   },
   {
     head: "Grown, not pitched.",
-    body: "Most consultants leave you with a slide deck. I leave you with software that's been running in real classrooms, plus the skills your team needs to keep it running in yours.",
+    body: "I leave you with software, not a slide deck. It's been running in my own classroom. Your team gets the skills to keep it running in yours.",
   },
   {
     head: "Teachers learn by building.",
-    body: "I'm a constructionist. Teachers learn AI by making with it, not by watching a webinar about it. My workshops put the tools in your team's hands and the understanding stays after I log off.",
+    body: "Seymour Papert taught me that people learn by making things. Watching a webinar about AI is not the same as making something with it. My workshops put the tools in your team's hands. The understanding stays after I log off.",
   },
   {
     head: "You own everything.",
@@ -124,7 +124,7 @@ function Hero() {
             AI tools, grown in a classroom.
           </h1>
           <p className="max-w-[620px] text-lg leading-[1.55] text-ink-soft">
-            I help teachers and schools take the administrative parts of teaching off their plates — so they can spend more time with their students. Built and used in a real classroom.
+            Over the past year I&apos;ve been building agentic AI tools for my classroom. They handle planning, grading, and reports. They give me back time with my students. I help other teachers and schools build their own.
           </p>
           <div className="flex flex-wrap items-center gap-6">
             <a
@@ -196,7 +196,7 @@ function Services() {
           <div className="flex flex-col gap-5">
             <SectionLabel dotColor="bg-avocado" text="What I can do / 01" />
             <h2 className="font-display text-4xl font-medium leading-[1.05] tracking-[-1.2px] text-ink md:text-5xl lg:text-[56px]">
-              Three things, done thoughtfully.
+              What I do.
             </h2>
           </div>
           <p className="max-w-[380px] text-base leading-[1.55] text-ink-soft">
@@ -240,7 +240,7 @@ function Process() {
           <div className="flex flex-col gap-5">
             <SectionLabel dotColor="bg-avocado" text="How I work / 02" />
             <h2 className="font-display text-4xl font-medium leading-[1.05] tracking-[-1.2px] text-ink md:text-5xl lg:text-[56px]">
-              Three steps. No mystery.
+              How it usually goes.
             </h2>
           </div>
           <div className="flex flex-col">
@@ -281,7 +281,7 @@ function Why() {
             </h2>
           </div>
           <p className="max-w-[260px] font-display text-lg italic leading-[1.4] text-ink-muted">
-            An honest list. Not a sales page.
+            You can ask me about any of these.
           </p>
         </div>
         <div className="flex flex-col">
