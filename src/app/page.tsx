@@ -149,14 +149,14 @@ function Hero() {
           </div>
         </div>
         <div className="hidden flex-col items-center gap-7 pt-3 md:flex">
-          <PinstripeMotif />
+          <AutomataMotif />
           <div className="flex items-center gap-2.5">
             <span className="font-mono text-[10px] font-medium uppercase tracking-[1.6px] text-ink-muted">
               Fig. 01
             </span>
             <span className="block h-px w-4 bg-rule" />
             <span className="font-mono text-[10px] font-medium uppercase tracking-[1.6px] text-ink-muted">
-              Growing software
+              Rule 30 · Growing software
             </span>
           </div>
         </div>
@@ -180,14 +180,50 @@ function Hero() {
   );
 }
 
-function PinstripeMotif() {
-  const stripes = Array.from({ length: 11 }, (_, i) => 20 + i * 28);
+function AutomataMotif() {
+  const cols = 21;
+  const rows = 17;
+  const cellSize = 14;
+  const seedCol = Math.floor(cols / 2);
+
+  const grid: number[][] = [];
+  let current: number[] = Array(cols).fill(0);
+  current[seedCol] = 1;
+  grid.push([...current]);
+
+  for (let r = 1; r < rows; r++) {
+    const next = current.map((_, i) => {
+      const left = current[i - 1] ?? 0;
+      const center = current[i];
+      const right = current[i + 1] ?? 0;
+      const pattern = (left << 2) | (center << 1) | right;
+      return (30 >> pattern) & 1;
+    });
+    grid.push(next);
+    current = next;
+  }
+
+  const width = cols * cellSize;
+  const height = rows * cellSize;
+
   return (
-    <svg viewBox="0 0 320 280" width="320" height="280" aria-hidden>
-      {stripes.map((x) => (
-        <rect key={x} x={x} y={0} width={1} height={280} fill="var(--color-ink-soft)" />
-      ))}
-      <rect x={155.5} y={135} width={10} height={10} fill="var(--color-burnt)" />
+    <svg viewBox={`0 0 ${width} ${height}`} width={width} height={height} aria-hidden>
+      {grid.map((row, rIdx) =>
+        row.map((cell, cIdx) => {
+          if (!cell) return null;
+          const isSeed = rIdx === 0;
+          return (
+            <rect
+              key={`${rIdx}-${cIdx}`}
+              x={cIdx * cellSize}
+              y={rIdx * cellSize}
+              width={cellSize - 1}
+              height={cellSize - 1}
+              fill={isSeed ? "var(--color-burnt)" : "var(--color-ink-soft)"}
+            />
+          );
+        })
+      )}
     </svg>
   );
 }
