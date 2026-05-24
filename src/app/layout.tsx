@@ -22,13 +22,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "awesome.town — AI tools, grown in a classroom",
+  title: "awesome.town — AI tools, grown for the classroom",
   description:
-    "Take the administrative parts of teaching off your plate. So you can spend more time doing what drew you to the work. Built and used in a real classroom.",
+    "Agentic AI tools for teachers, grown in a real classroom. I help teachers and schools build their own — for planning, grading, and reports.",
   openGraph: {
-    title: "awesome.town — AI tools, grown in a classroom",
+    title: "awesome.town — AI tools, grown for the classroom",
     description:
-      "Take the administrative parts of teaching off your plate. Built and used in a real classroom.",
+      "Agentic AI tools for teachers, grown in a real classroom. I help teachers and schools build their own.",
     type: "website",
   },
 };

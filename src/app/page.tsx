@@ -1,3 +1,5 @@
+import { ContactForm } from "@/components/ContactForm";
+
 const NAV_LINKS: { href: string; label: string; external?: boolean }[] = [
   { href: "#services", label: "Work" },
   { href: "#process", label: "Approach" },
@@ -100,10 +102,12 @@ function Nav() {
         ))}
       </div>
       <a
-        href="mailto:hello@awesome.town"
+        href="https://www.jaymesdec.com/"
+        target="_blank"
+        rel="noopener noreferrer"
         className="font-mono text-xs uppercase tracking-[0.8px] text-ink-soft transition-colors hover:text-ink"
       >
-        hello@awesome.town
+        By Jaymes Dec
       </a>
     </nav>
   );
@@ -121,10 +125,10 @@ function Hero() {
             </span>
           </div>
           <h1 className="font-display text-5xl font-medium leading-none tracking-[-1.4px] text-ink md:text-[80px] md:tracking-[-2px] lg:text-[96px] lg:tracking-[-2.4px]">
-            AI tools, grown in a classroom.
+            AI tools, grown for the classroom.
           </h1>
           <p className="max-w-[620px] text-lg leading-[1.55] text-ink-soft">
-            Over the past year I&apos;ve been building agentic AI tools for my classroom. They handle planning, grading, and reports. They give me back time with my students. I help other teachers and schools build their own.
+            Over the past few years I&apos;ve been building agentic AI tools for my classroom. They handle planning, grading, and reports. They give me back time with my students. I help other teachers and schools build their own.
           </p>
           <div className="flex flex-wrap items-center gap-6">
             <a
@@ -369,20 +373,7 @@ function Contact() {
           </div>
           <ContactMark />
         </div>
-        <a
-          href="mailto:hello@awesome.town"
-          className="group inline-flex flex-wrap items-center gap-3 self-start md:gap-4"
-        >
-          <span className="font-display text-4xl font-medium leading-none tracking-[-1px] text-ink underline underline-offset-[8px] decoration-1 transition-colors group-hover:text-burnt md:text-6xl md:tracking-[-1.6px] md:underline-offset-[10px] lg:text-[80px] lg:tracking-[-2px]">
-            hello@awesome.town
-          </span>
-          <span className="font-display text-3xl text-burnt transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 md:text-5xl lg:text-[56px]">
-            ↗
-          </span>
-        </a>
-        <p className="text-base italic leading-[1.5] text-ink-soft">
-          I answer within a couple of days. Usually faster.
-        </p>
+        <ContactForm />
       </div>
     </section>
   );
