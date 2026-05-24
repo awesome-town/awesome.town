@@ -413,7 +413,27 @@ function SiteFooter() {
           </span>
           <span className="block h-px w-5 bg-rule" />
           <span className="font-mono text-[11px] uppercase tracking-[1.4px] text-ink-muted">
-            Made in New Jersey
+            Grown with{" "}
+            <span aria-label="love" role="img" className="normal-case">
+              ❤️
+            </span>{" "}
+            <a
+              href="https://claude.com/claude-code"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-rule underline-offset-2 transition-colors hover:text-ink"
+            >
+              Claude Code
+            </a>{" "}
+            &{" "}
+            <a
+              href="https://www.pencil.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-rule underline-offset-2 transition-colors hover:text-ink"
+            >
+              Pencil
+            </a>
           </span>
         </div>
         <div className="flex items-center gap-6">
