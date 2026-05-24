@@ -4,6 +4,7 @@ const NAV_LINKS: { href: string; label: string; external?: boolean }[] = [
   { href: "#services", label: "Work" },
   { href: "#process", label: "Approach" },
   { href: "https://www.jaymesdec.com/blog", label: "Writing", external: true },
+  { href: "https://github.com/awesome-town", label: "Code", external: true },
   { href: "#contact", label: "Contact" },
 ];
 
