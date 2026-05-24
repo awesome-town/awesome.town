@@ -1,27 +1,34 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
+import { Newsreader, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
-  title: "awesome.town — Agentic AI for Schools",
+  title: "awesome.town — AI tools, grown in a classroom",
   description:
-    "We help schools and teachers build real AI teaching assistants. Not theory — tools built by a teacher, for teachers.",
+    "Take the administrative parts of teaching off your plate. So you can spend more time doing what drew you to the work. Built and used in a real classroom.",
   openGraph: {
-    title: "awesome.town — Agentic AI for Schools",
+    title: "awesome.town — AI tools, grown in a classroom",
     description:
-      "We help schools and teachers build real AI teaching assistants. Not theory — tools built by a teacher, for teachers.",
+      "Take the administrative parts of teaching off your plate. Built and used in a real classroom.",
     type: "website",
   },
 };
@@ -34,9 +41,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bricolage.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${newsreader.variable} ${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="grain min-h-full">{children}</body>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }
